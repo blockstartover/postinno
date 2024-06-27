@@ -1,0 +1,6 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="code-input">Enter your code:</label>
+    <textarea id="code-input" name="code" rows="10" cols="50" required></textarea>
+    <button type="submit">Analyze Code</button>
+</form>
