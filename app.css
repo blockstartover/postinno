@@ -61,11 +61,70 @@
 
 section {
     width: 100%;
+    position: relative;
 }
 
 section img {
     width: 100%;
     height: 100%;
+}
+
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+  
+#modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+#codeInput {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    white-space: pre-wrap;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#demoButton {
+    position: absolute;
+    top: 29em;
+    border-radius: 2em;
+    background: none;
+    color: #0d9df1;
+    border: 2px solid;
+    font-size: 1em;
+    padding: 1em 2em;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  }
+  
+#demoButton:hover {
+    border-color: #f1ff5c;
+    color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em;
+    transform: translateY(-0.25em);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 961px) {
